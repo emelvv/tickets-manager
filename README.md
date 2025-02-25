@@ -108,7 +108,8 @@ GET /api/tickets?startDate=2024-01-01&endDate=2024-01-31
 ```
 
 **Отменить обращение:**
-```PUT /api/tickets/1/cancel
+```http
+PUT /api/tickets/1/cancel
 Content-Type: application/json
 {
   "cancellationReason": "Обращение дублируется"
@@ -116,7 +117,7 @@ Content-Type: application/json
 ```
 
 **Отменить все обращения в работе:**
-```
+```http
 PUT /api/tickets/cancel-all-in-progress
 Content-Type: application/json
 {
